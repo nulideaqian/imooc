@@ -1,5 +1,6 @@
 package com.imooc.flink.source;
 
+import com.imooc.flink.transformation.Access;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.functions.FilterFunction;
@@ -22,12 +23,20 @@ public class SourceApp {
     StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
     // test01(env);
     // test03(env);
-    test04(env);
+    test05(env);
     env.execute("sourceApp");
   }
 
-  private static void test04(StreamExecutionEnvironment env) {
+  private static void test05(StreamExecutionEnvironment env) {
+    DataStreamSource<Student> source = env.addSource(new StudentSource());
+    System.out.println(source.getParallelism());
+    source.print();
+  }
 
+  private static void test04(StreamExecutionEnvironment env) {
+    DataStreamSource<Access> source = env.addSource(new AccessSourceV2());
+    System.out.println(source.getParallelism());
+    source.print();
   }
 
   private static void test03(StreamExecutionEnvironment env) {

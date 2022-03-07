@@ -25,8 +25,15 @@ public class TransformationApp {
     // flatMap(env);
     //  keyBy(env);
     // reduce(env);
-    richMap(env);
+    // richMap(env);
+    union(env);
     env.execute("Source App");
+  }
+
+  private static void union(StreamExecutionEnvironment env) {
+    DataStreamSource<String> source1 = env.socketTextStream("localhost", 9527);
+    DataStreamSource<String> source2 = env.socketTextStream("localhost", 9528);
+    source1.union(source2).print();
   }
 
   private static void richMap(StreamExecutionEnvironment env) {

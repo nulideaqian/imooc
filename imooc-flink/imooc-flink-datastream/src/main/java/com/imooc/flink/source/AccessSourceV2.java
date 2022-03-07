@@ -2,13 +2,14 @@ package com.imooc.flink.source;
 
 import com.imooc.flink.transformation.Access;
 import java.util.Random;
+import org.apache.flink.streaming.api.functions.source.ParallelSourceFunction;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 
 /**
  * @author Galaxy
  * @since 2022/3/7 0:01
  */
-public class AccessSource implements SourceFunction<Access> {
+public class AccessSourceV2 implements ParallelSourceFunction<Access> {
 
   boolean running = true;
 
