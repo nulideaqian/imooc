@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="imooc-flink-project" />
         <module name="imooc-flink-datastream" />
         <module name="imooc-flink-basic" />
         <module name="imooc-flink-sql" />

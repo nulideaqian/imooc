@@ -1,0 +1,7 @@
+
+–
+java:S1186,"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(˜±ü
+B
+java:S1948",Make "connection" transient or serializable.(óøµó
+N
+java:S1948"3Make "preparedStatement" transient or serializable.(¡Ò½Çøÿÿÿÿ
