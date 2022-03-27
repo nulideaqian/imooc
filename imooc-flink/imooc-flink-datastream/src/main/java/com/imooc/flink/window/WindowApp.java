@@ -1,6 +1,5 @@
 package com.imooc.flink.window;
 
-import java.util.List;
 import org.apache.flink.api.common.functions.AggregateFunction;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.common.functions.ReduceFunction;
@@ -22,8 +21,72 @@ public class WindowApp {
 
   public static void main(String[] args) throws Exception {
     StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-    test04(env);
+    test05(env);
     env.execute("Window App");
+  }
+
+  private static void test05(StreamExecutionEnvironment env) {
+    env.setParallelism(1);
+    env.socketTextStream("localhost", 9527)
+        .map(new MapFunction<String, Tuple3<String, Integer, Integer>>() {
+          @Override
+          public Tuple3<String, Integer, Integer> map(String value) throws Exception {
+            String[] splits = value.split(",");
+            return Tuple3.of(splits[0], Integer.parseInt(splits[1]), Integer.parseInt(splits[2]));
+          }
+        })
+        .keyBy(x -> x.f0)
+        .window(TumblingProcessingTimeWindows.of(Time.seconds(30)))
+        .process(
+            new ProcessWindowFunction<Tuple3<String, Integer, Integer>, Object, String, TimeWindow>() {
+              @Override
+              public void process(String s,
+                  ProcessWindowFunction<Tuple3<String, Integer, Integer>, Object, String, TimeWindow>.Context context,
+                  Iterable<Tuple3<String, Integer, Integer>> elements, Collector<Object> out)
+                  throws Exception {
+                elements.iterator().forEachRemaining(it -> {
+                  System.out.println("it --> " + it);
+                });
+              }
+            })
+        // .aggregate(
+        //     new AggregateFunction<Tuple3<String, Integer, Integer>, Tuple3<String, Integer, Integer>, Tuple3<String, Integer, Integer>>() {
+        //       @Override
+        //       public Tuple3<String, Integer, Integer> createAccumulator() {
+        //         return Tuple3.of("", 0, 0);
+        //       }
+        //
+        //       @Override
+        //       public Tuple3<String, Integer, Integer> add(Tuple3<String, Integer, Integer> value,
+        //           Tuple3<String, Integer, Integer> accumulator) {
+        //         return Tuple3.of(value.f0, accumulator.f1 + value.f1, value.f2);
+        //       }
+        //
+        //       @Override
+        //       public Tuple3<String, Integer, Integer> getResult(
+        //           Tuple3<String, Integer, Integer> accumulator) {
+        //         return accumulator;
+        //       }
+        //
+        //       @Override
+        //       public Tuple3<String, Integer, Integer> merge(Tuple3<String, Integer, Integer> a,
+        //           Tuple3<String, Integer, Integer> b) {
+        //         return null;
+        //       }
+        //     },
+        //     new ProcessWindowFunction<Tuple3<String, Integer, Integer>, Tuple3<String, Integer, Integer>, String, TimeWindow>() {
+        //
+        //       @Override
+        //       public void process(String s,
+        //           ProcessWindowFunction<Tuple3<String, Integer, Integer>, Tuple3<String, Integer, Integer>, String, TimeWindow>.Context context,
+        //           Iterable<Tuple3<String, Integer, Integer>> elements,
+        //           Collector<Tuple3<String, Integer, Integer>> out) throws Exception {
+        //         elements.iterator().forEachRemaining(it -> {
+        //           System.out.println("it --> " + it);
+        //         });
+        //       }
+        //     })
+        .print();
   }
 
   private static void test04(StreamExecutionEnvironment env) {
