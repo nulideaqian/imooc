@@ -43,7 +43,7 @@ public class StateApp {
     list.add(Tuple2.of(1L, 3L));
     env.fromCollection(list)
         .keyBy(x -> x.f0)
-        .flatMap(new AvgWithMapState())
+        .flatMap(new AvgWithValueState())
         .print();
   }
 }
@@ -77,34 +77,41 @@ class AvgWithMapState extends RichFlatMapFunction<Tuple2<Long, Long>, Tuple2<Lon
   }
 }
 
-class AvgWithValueState extends RichFlatMapFunction<Tuple2<Long, Long>, Tuple2<Long, Double>> {
+class AvgWithValueState extends RichFlatMapFunction<Tuple2<Long, Long>, Tuple2<Long, Long>> {
 
   private transient ValueState<Tuple2<Long, Long>> sum;
+
+  private transient ValueState<Tuple2<Long, Long>> newest;
 
   @Override
   public void open(Configuration parameters) throws Exception {
     ValueStateDescriptor<Tuple2<Long, Long>> descriptor = new ValueStateDescriptor<>(
-        "avg",
-        Types.TUPLE(Types.LONG, Types.LONG));
+        "avg", Types.TUPLE(Types.LONG, Types.LONG));
+    ValueStateDescriptor<Tuple2<Long, Long>> descriptorNew = new ValueStateDescriptor<Tuple2<Long, Long>>(
+        "newest", Types.TUPLE(Types.LONG, Types.LONG));
     sum = getRuntimeContext().getState(descriptor);
+    newest = getRuntimeContext().getState(descriptorNew);
   }
 
   @Override
-  public void flatMap(Tuple2<Long, Long> value, Collector<Tuple2<Long, Double>> out)
+  public void flatMap(Tuple2<Long, Long> value, Collector<Tuple2<Long, Long>> out)
       throws Exception {
     Tuple2<Long, Long> currentState = sum.value();
+    Tuple2<Long, Long> currentStateNew = newest.value();
     if (currentState == null) {
       currentState = Tuple2.of(0L, 0L);
     }
+    if (currentStateNew == null) {
+      currentStateNew = Tuple2.of(0L, 0L);
+    }
     currentState.f0 += 1;
     currentState.f1 += value.f1;
+    currentStateNew.f0 = value.f0;
+    currentStateNew.f1 = value.f1;
     sum.update(currentState);
+    newest.update(currentStateNew);
 
-    System.out.println(currentState);
-
-    if (currentState.f0 >= 2) {
-      out.collect(Tuple2.of(value.f0, currentState.f1 / currentState.f0.doubleValue()));
-      sum.clear();
-    }
+    out.collect(sum.value());
+    out.collect(newest.value());
   }
 }

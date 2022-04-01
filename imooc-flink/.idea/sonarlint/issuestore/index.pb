@@ -29,7 +29,3 @@ Himooc-flink-datastream/src/main/java/com/imooc/flink/source/Student.java,e\b\e
 Nimooc-flink-datastream/src/main/java/com/imooc/flink/source/StudentSource.java,d\1\d1fdc93ae495270ddf9094b9801c5d910cd96170
 z
 Jimooc-flink-datastream/src/main/java/com/imooc/flink/sink/PkMysqlSink.java,0\1\01e953460ef0f96714ddfaf79bfb5232d7612149
-
-Oimooc-flink-project/src/main/java/com/imooc/flink/app/ProvinceUserCntAppV1.java,0\d\0db5ab3ea16f16bb307fe28bb574b78954942588
-
-Oimooc-flink-datastream/src/main/java/com/imooc/flink/window/EventTimeWMApp.java,8\f\8fc074306de00f58a54acf078b1bcf4f7519d8d4
