@@ -1,0 +1,21 @@
+
+N
+java:S1602/",Remove useless curly braces around statement(Ýšæ‹þÿÿÿÿ8¤¡•áü/
+U	java:S1060"9Replace this use of System.out or System.err by a logger.(ž§Ïý8¥¡•áü/
+X	java:S1255"<This block of commented-out lines of code should be removed.(Û¡ºŽ8Øê”áü/
+R	java:S125¥"<This block of commented-out lines of code should be removed.(Š°œ
+q
+java:S1128"TRemove this unused import 'org.apache.flink.api.common.functions.AggregateFunction'.(¯ÏÌˆ8çê”áü/
+
+java:S1128
+"mRemove this unused import 'org.apache.flink.streaming.api.functions.windowing.ProcessWindowFunction.Context'.(ð¯€Äùÿÿÿÿ8çê”áü/
+M
+java:S1144\"+Remove this unused private "test04" method.(¯½©€üÿÿÿÿ8÷“ÿàü/
+F
+java:S1144u"+Remove this unused private "test03" method.(’Ñ“ðûÿÿÿÿ
+G
+java:S1144Ž"+Remove this unused private "test02" method.(Å«‚‘ýÿÿÿÿ
+G
+java:S1144£"+Remove this unused private "test01" method.(­¹šùÿÿÿÿ
+e
+java:S1192"JDefine a constant instead of duplicating this literal "localhost" 5 times.(‹§†¿ýÿÿÿÿ

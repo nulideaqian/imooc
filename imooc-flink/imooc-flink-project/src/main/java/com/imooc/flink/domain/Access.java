@@ -38,6 +38,8 @@ public class Access {
    * 1 新用户
    */
   public int nu;
+
+  public int nu2;
   /**
    * 10.10.10.xx
    */
