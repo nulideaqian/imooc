@@ -1,0 +1,74 @@
+@startuml
+
+abstract class GeelyClass {
+  + name: String
+  - age: int
+  # weight: double
+  ~ height: double
+  + sex: char
+
+  + eat(food)
+  # drink()
+  - walk()
+  ~ run()
+  {abstract} study()
+  + openMac(): boolean
+  + playGames()
+}
+
+@enduml
+
+@startuml 大话设计模式
+
+class 氧气 {}
+
+class 水 {}
+
+class 动物 {
+  + 生命
+  + 新陈代谢(氧气, 水)
+  + 繁殖()
+}
+
+动物 -[dashed]-> 氧气
+动物 -[dashed]-> 水
+
+class 鸟 extends 动物 {
+  + 羽毛
+  + 下单()
+}
+
+class 翅膀 {}
+
+鸟 "1" *-- "2" 翅膀
+
+class 大雁 extends 鸟 implements 飞翔 {
+  + 下蛋()
+  + 飞行()
+}
+
+class 鸭 extends 鸟 {
+  + 下蛋()
+}
+
+class 企鹅 extends 鸟 {
+  + 下蛋()
+}
+
+企鹅 --> 气候
+
+class 大雁群 {
+  + V形飞行()
+  + 一形飞行()
+}
+
+大雁群 o-- 大雁
+
+interface 飞翔 {
+ {abstract} 飞()
+}
+
+class 唐老鸭 extends 鸭 {
+  + 讲话()
+}
+@enduml
