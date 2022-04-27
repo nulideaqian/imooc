@@ -63,3 +63,17 @@ z
 Jsrc/main/java/org/galaxy/creational/pattern/simplefactory/PythonVideo.java,a\e\ae03ad3290a1d083db4930bf6bb133b84284e0dc
 {
 Ksrc/main/java/org/galaxy/creational/pattern/simplefactory/VideoFactory.java,c\4\c4077230df46c23dba4453f76e2a81f8a093f0d2
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+x
+Hsrc/main/java/org/galaxy/creational/pattern/factorymethod/JavaVideo.java,4\a\4a515f811da0b9b0eeaa9a4360dba28fa958dbe5
+{
+Ksrc/main/java/org/galaxy/creational/pattern/factorymethod/VideoFactory.java,4\6\46a0a95c05afa824a05653e02b9bcafdc250a52d
+
+Osrc/main/java/org/galaxy/creational/pattern/factorymethod/JavaVideoFactory.java,1\8\18461bc97378eb20ef92fadae123afe00aaf68d0
+Å
+Qsrc/main/java/org/galaxy/creational/pattern/factorymethod/PythonVideoFactory.java,7\7\77113f29f81d1e309c5bab7b18c508288a983b71
+s
+Csrc/main/java/org/galaxy/creational/pattern/simplefactory/Test.java,b\b\bbd39c327f2d399beddb501cde812607a58d87b0
+s
+Csrc/main/java/org/galaxy/creational/pattern/factorymethod/Test.java,0\d\0de1f5e54c94d74986851eb61427f9701f6c75c7
