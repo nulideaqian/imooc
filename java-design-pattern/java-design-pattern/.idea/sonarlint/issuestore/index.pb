@@ -63,8 +63,6 @@ z
 Jsrc/main/java/org/galaxy/creational/pattern/simplefactory/PythonVideo.java,a\e\ae03ad3290a1d083db4930bf6bb133b84284e0dc
 {
 Ksrc/main/java/org/galaxy/creational/pattern/simplefactory/VideoFactory.java,c\4\c4077230df46c23dba4453f76e2a81f8a093f0d2
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 x
 Hsrc/main/java/org/galaxy/creational/pattern/factorymethod/JavaVideo.java,4\a\4a515f811da0b9b0eeaa9a4360dba28fa958dbe5
 {
@@ -97,13 +95,3 @@ u
 Esrc/main/java/org/galaxy/creational/pattern/abstractfactory/Test.java,3\9\396eb3a026571ffaba4272d64dfa3857a6ca472d
 ~
 Nsrc/main/java/org/galaxy/creational/pattern/abstractfactory/CourseFactory.java,5\3\538e9f0f39be96f31e37a98ec4a0805200ea489e
-v
-Fsrc/main/java/org/galaxy/creational/pattern/builder/CourseBuilder.java,4\b\4b6884f44809be8e73538f850b25fe35b2c3bc81
-n
->src/main/java/org/galaxy/creational/pattern/builder/Coach.java,8\8\88574967b68576d933db51fa22d49b19cc8f5012
-|
-Lsrc/main/java/org/galaxy/creational/pattern/builder/CourseActualBuilder.java,3\7\370686f8b0fa074e1c96192b67fedcb888ff1581
-~
-Nsrc/main/java/org/galaxy/creational/pattern/builder/CourseActualBuilderV2.java,a\a\aae997d06659861e3923429ca0542222345f517a
-o
-?src/main/java/org/galaxy/creational/pattern/builder/Course.java,4\4\44e18fdc5bf4a768879022b49fd6f2822c647445
