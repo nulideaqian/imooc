@@ -1,0 +1,8 @@
+
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(…’Í8òãİÏˆ0
+T
+java:S2589"7Remove this expression which always evaluates to "true"(âŒ¸Ç8äİÏˆ0
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ßÌã˜ûÿÿÿÿ8ü’øÍˆ0
+g
+java:S2062"EMake this class "private" or elevate the visibility of "readResolve".(ŒÇ«Óüÿÿÿÿ8¹†¨Îˆ0

@@ -1,0 +1,9 @@
+
+=
+java:S1700	""Rename field "threadLocalInstance"(ëÑ™ˆùÿÿÿÿ
+D
+java:S5164	")Call "remove()" on "threadLocalInstance".(ëÑ™ˆùÿÿÿÿ
+h
+java:S4065	"FReplace this anonymous class with a call to "ThreadLocal.withInitial".(ëÑ™ˆùÿÿÿÿ8÷¢Òˆ0
+U
+java:S2440"3Remove this instantiation of "ThreadLocalInstance".( ÕŸµúÿÿÿÿ8ø¢Òˆ0

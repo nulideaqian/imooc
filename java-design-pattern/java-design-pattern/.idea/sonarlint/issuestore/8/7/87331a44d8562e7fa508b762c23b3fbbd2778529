@@ -1,0 +1,27 @@
+
+D
+java:S3740$"/Provide the parametrized type for this generic.(Ìıìx
+E
+java:S3740%"/Provide the parametrized type for this generic.(’›—
+
+java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(‡’õ»üÿÿÿÿ8…ÍØÏˆ0
+›
+java:S1130"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(‡’õ»üÿÿÿÿ8…ÍØÏˆ0
+V	java:S125"<This block of commented-out lines of code should be removed.(¤¥Œ¢üÿÿÿÿ
+P	java:S125"<This block of commented-out lines of code should be removed.(‡üŸe
+I
+java:S3011&",This accessibility update should be removed.(”İÙ®8ŠÍØÏˆ0
+Z	java:S106)"9Replace this use of System.out or System.err by a logger.(ÍÎÆ¥ùÿÿÿÿ8»½×Ïˆ0
+Z	java:S106*"9Replace this use of System.out or System.err by a logger.(èæ¤şûÿÿÿÿ8¼½×Ïˆ0
+F
+java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8ÍØÏˆ0
+Q
+java:S1128"4Remove this unused import 'java.io.FileInputStream'.(˜³ÉÓ8ÍØÏˆ0
+\
+java:S1128":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ8ÍØÏˆ0
+Q
+java:S1128"5Remove this unused import 'java.io.FileOutputStream'.(˜«ªg8ÍØÏˆ0
+S
+java:S1128"6Remove this unused import 'java.io.ObjectInputStream'.(Éæéœ8ÍØÏˆ0
+Y
+java:S1128	"7Remove this unused import 'java.io.ObjectOutputStream'.(é»Óºûÿÿÿÿ8ÍØÏˆ0

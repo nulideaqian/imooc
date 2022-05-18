@@ -1,0 +1,17 @@
+
+~
+java:S1450*"\Remove the "courseArticle" field and declare it as a local variable in the relevant methods.(ºáñ¾üÿÿÿÿ8º¤§â†0
+z
+java:S1450&"XRemove the "coursePpt" field and declare it as a local variable in the relevant methods.(êİÛçıÿÿÿÿ8º¤§â†0
+t
+java:S1450,"WRemove the "courseQa" field and declare it as a local variable in the relevant methods.(òŞğ8º¤§â†0
+|
+java:S1450("ZRemove the "courseVideo" field and declare it as a local variable in the relevant methods.(•¸Î®ÿÿÿÿÿ8º¤§â†0
+O
+java:S1068&"-Remove this unused "coursePpt" private field.(êİÛçıÿÿÿÿ8º¤§â†0
+Q
+java:S1068("/Remove this unused "courseVideo" private field.(•¸Î®ÿÿÿÿÿ8º¤§â†0
+S
+java:S1068*"1Remove this unused "courseArticle" private field.(ºáñ¾üÿÿÿÿ8º¤§â†0
+I
+java:S1068,",Remove this unused "courseQa" private field.(òŞğ8¿¤§â†0
